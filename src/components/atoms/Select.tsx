@@ -8,7 +8,7 @@ type SelectProps = {
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-export const Select: React.FC<SelectProps> = ({id, className, children, value, onChange }) => {
+const Select: React.FC<SelectProps> = ({ id, className, children, value, onChange }) => {
   return (
     <select
       id={id}
@@ -20,3 +20,5 @@ export const Select: React.FC<SelectProps> = ({id, className, children, value, o
     </select>
   );
 }
+
+export default Select;
