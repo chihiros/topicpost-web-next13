@@ -17,7 +17,7 @@ const Styles = {
   submit: 'text-white bg-blue-700 hover:bg-blue-800',
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   className,
@@ -34,7 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      onClick={onClick ? onClick : () => {}}
+      onClick={onClick ? onClick : () => { }}
       className={`${className} py-2 px-4 rounded-lg`}
       type={submit ? 'submit' : 'button'}
     >
@@ -42,3 +42,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export default Button;
