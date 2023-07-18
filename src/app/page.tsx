@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* <Button>aaaaa</Button> */}
-      <SubmitButton>aaaa</SubmitButton>
+      {/* <SubmitButton>aaaa</SubmitButton> */}
       {/* <ArrowRight /> */}
       {/* <Text
         // type="text"
