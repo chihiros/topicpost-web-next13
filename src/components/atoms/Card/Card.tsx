@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import Twemoji from 'react-twemoji';
 // import { MarkdownPreview } from '../Markdown';
-import { RecreationData } from '../../../../api/api.topicpost.net/recreation';
+// import { RecreationData } from '../../../../api/api.topicpost.net/recreation';
+// import { RecreationData } from '@../';
 
 type CardProps = {
   title: string;
   date: string;
   content: string;
   recreationId: string;
-  data: RecreationData; // atomsのコンポートであるため、最終的には依存関係を取り除きたい
+  // data: RecreationData; // atomsのコンポートであるため、最終的には依存関係を取り除きたい
+  data: any; // atomsのコンポートであるため、最終的には依存関係を取り除きたい
   // onClick?: () => void;
   // className?: string;
   // children: ReactNode;
@@ -60,7 +64,7 @@ const Card: React.FC<CardProps> = ({ title, date, content, recreationId, data })
 
   return (
     <div className="flex-shrink-0 w-64 bg-white rounded-lg">
-      <Link to={`/recreation/` + data.recreation_id}>
+      <Link href={`/recreation/` + data.recreation_id}>
         <div className='bg-gray-100 rounded-t-lg h-32 flex justify-center items-center'>
           {/* ランダムでTwemojiを表示したい */}
           <span className='text-6xl'>
