@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Button, SubmitButton } from '@/components/atoms/Button';
 // import ArrowRight from '@/components/atoms/Icon/Arrow';
 import { Text, Textarea, Annotation } from '@/components/atoms/Input';
+import { Card } from '@/components/atoms/Card';
 
 export default function Home() {
   return (
@@ -20,6 +21,13 @@ export default function Home() {
         className='w-96'
       />
       <Annotation>aaaa</Annotation> */}
+      <Card
+        title='タイトル'
+        date="2021/10/10"
+        content='コンテンツ'
+        recreationId='1'
+        data='data'
+      />
     </>
   )
 }
