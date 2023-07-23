@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Twemoji from 'react-twemoji';
 // import { MarkdownPreview } from '../Markdown';
