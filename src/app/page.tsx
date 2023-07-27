@@ -21,13 +21,13 @@ export default function Home() {
         className='w-96'
       />
       <Annotation>aaaa</Annotation> */}
-      <Card
+      {/* <Card
         title='タイトル'
         date="2021/10/10"
         content='コンテンツ'
         recreationId='1'
         data='data'
-      />
+      /> */}
     </>
   )
 }
