@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 // import { useLoginModal } from "../../../../context/LoginModalContext";
-import { SocialLoginButton, SocialLoginProps } from "./Parts/SocialLoginButton";
+import { SocialLoginButton, SocialLoginProps } from "./Parts/SocialButton";
 import { BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { RxCross2 } from "react-icons/rx";
