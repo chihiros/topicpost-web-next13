@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Provider from '@/app/provider';
+import Sidebar from '@/components/organisms/Sidebar';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -12,6 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={``}>
         <Provider>
+          {/* Sidebarを追加する */}
+          <Sidebar />
           {/* メインコンテツ部分を追加する */}
           <div className="p-3 lg:ml-64">
             {children}
