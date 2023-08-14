@@ -1,3 +1,7 @@
 import { LoginButton } from "./Login";
+import { Label } from "./Label";
 
-export { LoginButton };
+export {
+  LoginButton,
+  Label
+};

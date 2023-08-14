@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { LoginButton } from './Parts'
+import { LoginButton, Label } from './Parts'
+import { sidebar } from '@/constants/sidebar'
 
 const Sidebar = () => {
   // これする意味ないかも
@@ -20,14 +21,14 @@ const Sidebar = () => {
         {/* {isLoggedIn ? <SidebarLoggedIn /> : <SidebarLogin />} */}
         <LoginButton />
 
-        {/* {sidebar.map((label, index) => (
-          <SidebarLabel
+        {sidebar.map((label, index) => (
+          <Label
             key={index}
             icon={label.icon}
             label={label.label}
             link={label.link}
           />
-        ))} */}
+        ))}
         <div className="mt-4">
           <button
             // onClick={handleLogout}
