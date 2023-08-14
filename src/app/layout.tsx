@@ -12,7 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={``}>
         <Provider>
-          {children}
+          {/* メインコンテツ部分を追加する */}
+          <div className="p-3 lg:ml-64">
+            {children}
+          </div>
         </Provider>
       </body>
     </html>
