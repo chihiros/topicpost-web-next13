@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { LoginButton, Label } from './Parts'
 import { sidebar } from '@/constants/sidebar'
+import { Question } from './Parts'
 
 const Sidebar = () => {
   // これする意味ないかも
@@ -20,6 +21,8 @@ const Sidebar = () => {
 
         {/* {isLoggedIn ? <SidebarLoggedIn /> : <SidebarLogin />} */}
         <LoginButton />
+
+        <Question />
 
         {sidebar.map((label, index) => (
           <Label
