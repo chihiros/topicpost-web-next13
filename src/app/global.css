@@ -18,3 +18,7 @@ body {
     height: 0;
     padding-bottom: calc(16rem);
 }
+
+.user-select-none {
+    user-select: none;
+  }

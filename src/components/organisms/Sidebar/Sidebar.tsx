@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <aside
       id="logo-sidebar"
-      className={`fixed top-0 left-0 w-64 h-screen shadow ${SidebarStyle}`}
+      className={`fixed top-0 left-0 w-64 h-screen shadow ${SidebarStyle} user-select-none`}
       aria-label="Sidebar"
     >
       <div className="h-full py-4 overflow-y-auto bg-gray-50">
