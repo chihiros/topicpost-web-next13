@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useLoginModal } from "../../../context/LoginModalContext";
 
-export const SidebarLogin: React.FC = () => {
+export const LoginButton: React.FC = () => {
   // const { toggle } = useLoginModal();
   return (
     <div
