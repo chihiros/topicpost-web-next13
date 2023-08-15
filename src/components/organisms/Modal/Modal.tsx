@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-// import { useLoginModal } from "../../../../context/LoginModalContext";
+import { useLoginModal } from "@/components/organisms/Modal/Modal.Provider";
 import { SocialLoginButton, SocialLoginProps } from "./Parts/SocialButton";
 import { BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -10,6 +10,14 @@ import { SupabaseSignInWithProvider } from "@/utils/supabase"
 
 
 const LoginModal: React.FC = () => {
+  const { isOpen, toggle } = useLoginModal();
+
+  const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      toggle();
+    }
+  };
+
   const SocialLogins: SocialLoginProps[] = [
     {
       icon: <FcGoogle size={24} />,
@@ -30,23 +38,19 @@ const LoginModal: React.FC = () => {
     }
   ];
 
-  const isOpen = true;
-  console.log("isOpen", isOpen);
-
-
   return (
     <>
       {isOpen && (
         <>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-          // onClick={handleOverlayClick}
+            onClick={handleOverlayClick}
           >
             <div className="relative w-full max-w-2xl mx-3">
               {/* <!-- Modal content --> */}
               <div className="relative bg-white rounded-lg shadow">
                 <button
-                  // onClick={toggle}
+                  onClick={toggle}
                   type="button"
                   className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
                   <RxCross2 size={20} />

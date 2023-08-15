@@ -1,36 +1,36 @@
-// 'use client';
-// import React, { createContext, useState, useCallback, useMemo, useContext } from 'react';
+'use client';
+import React, { createContext, useState, useCallback, useMemo, useContext } from 'react';
 
-// interface LoginModalContextType {
-//   isOpen: boolean;
-//   toggle: () => void;
-// }
+interface LoginModalContextType {
+  isOpen: boolean;
+  toggle: () => void;
+}
 
-// export const LoginModalContext = createContext<LoginModalContextType>({
-//   isOpen: false,
-//   toggle: () => { },
-// });
+export const LoginModalContext = createContext<LoginModalContextType>({
+  isOpen: false,
+  toggle: () => { },
+});
 
-// export const useLoginModal = () => {
-//   return useContext(LoginModalContext);
-// };
+export const useLoginModal = () => {
+  return useContext(LoginModalContext);
+};
 
-// interface Props {
-//   children: React.ReactNode;
-// }
+interface Props {
+  children: React.ReactNode;
+}
 
-// export const LoginModalProvider: React.FC<Props> = ({ children }) => {
-//   const [isOpen, setIsOpen] = useState(false);
+export const LoginModalProvider: React.FC<Props> = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-//   const toggle = useCallback(() => {
-//     setIsOpen((prevIsOpen) => !prevIsOpen);
-//   }, []);
+  const toggle = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }, []);
 
-//   const value = useMemo(() => ({ isOpen, toggle }), [isOpen, toggle]);
+  const value = useMemo(() => ({ isOpen, toggle }), [isOpen, toggle]);
 
-//   return (
-//     <LoginModalContext.Provider value={value}>
-//       {children}
-//     </LoginModalContext.Provider>
-//   );
-// };
+  return (
+    <LoginModalContext.Provider value={value}>
+      {children}
+    </LoginModalContext.Provider>
+  );
+};

@@ -1,12 +1,13 @@
+'use client';
 import React from 'react';
-// import { useLoginModal } from "../../../context/LoginModalContext";
+import { useLoginModal } from '@/components/organisms/Modal/Modal.Provider';
 
-export const LoginButton: React.FC = () => {
-  // const { toggle } = useLoginModal();
+export const LoginButton = () => {
+  const { toggle } = useLoginModal();
   return (
     <div
       className="flex flex-col items-center justify-center hover:bg-gray-100 rounded-md p-3 mx-3 h-24"
-    // onClick={() => toggle()}
+      onClick={() => { toggle() }}
     >
       <div className="flex bg-gray-200 w-12 h-12 mx-auto p-3 mb-3 rounded-full">
         <svg width="24" height="24" viewBox="0 0 1453 1254" fill="#577381" xmlns="http://www.w3.org/2000/svg">
@@ -20,5 +21,3 @@ export const LoginButton: React.FC = () => {
     </div>
   );
 }
-
-// export default SidebarLogin;
