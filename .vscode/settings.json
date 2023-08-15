@@ -1,10 +1,12 @@
 {
     "cSpell.ignoreWords": [
         "Supabase",
+        "Toastify",
         "rehype",
         "signup",
         "supabase",
         "tailwindcss",
+        "toastify",
         "topicpost"
     ]
 }
