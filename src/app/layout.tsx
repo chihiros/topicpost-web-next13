@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Provider from '@/app/provider';
 import Sidebar from '@/components/organisms/Sidebar';
 import LoginModal from '@/components/organisms/Modal/Modal';
+import { WindowSize } from '@/components/debug/WindowSize';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -20,6 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="p-3 lg:ml-64">
             {children}
           </div>
+          {/* デバック用のコンポーネント */}
+          <WindowSize />
           <LoginModal />
         </Provider>
       </body>
