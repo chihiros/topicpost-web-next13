@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import { useAuthContext } from '@/components/organisms/context/Auth.Provider'
 import { LoginButton, Label } from './Parts'
 import { sidebar } from '@/constants/sidebar'
 import { Question } from './Parts'
 
 const Sidebar = () => {
+  const { isLoggedIn, setLoggedInFalse } = useAuthContext();
   // これする意味ないかも
   const SidebarStyle = "transition-transform -translate-x-full lg:translate-x-0";
 
@@ -35,7 +37,7 @@ const Sidebar = () => {
         <div className="mt-4">
           <button
             // onClick={handleLogout}
-            className="bg-slate-300 hover:bg-slate-700 text-white text-base font-bold py-2 px-4 rounded"
+            className="bg-slate-300 hover:bg-slate-700 text-_white text-base font-bold py-2 px-4 rounded"
           >
             ログアウト
           </button>

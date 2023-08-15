@@ -11,7 +11,7 @@ import toast from "@/utils/Toast";
 import { getErrorMessage } from "@/utils/ErrorMessage";
 import { supabaseClient } from "@/utils/supabase";
 // import { useHistory } from 'react-router-dom';
-// import { useAuthContext } from '../../../../context/AuthContext';
+import { useAuthContext } from '@/components/organisms/context/Auth.Provider';
 
 import ProfileAPI, { ProfileResponse } from "@/utils/api/api.topicpost.net/profile";
 
@@ -22,7 +22,7 @@ type EmailPasswordProps = {
 export const EmailPassword: React.FC<EmailPasswordProps> = ({ toggle }) => {
   const [modalEmail, setModalEmail] = useState<string>(''); // value属性を型付きのstringで初期化する
   const [modalPassword, setModalPassword] = useState<string>(''); // value属性を型付きのstringで初期化する
-  // const { setLoggedInTrue } = useAuthContext();
+  const { setLoggedInTrue } = useAuthContext();
   // const history = useHistory();
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,7 +56,7 @@ export const EmailPassword: React.FC<EmailPasswordProps> = ({ toggle }) => {
       .then((response: ProfileResponse) => {
         console.log("response", response);
         toast.success('ログインに成功しました');
-        // setLoggedInTrue();
+        setLoggedInTrue();
 
         if (response.data) {
           // 登録済みのProfileがある場合
