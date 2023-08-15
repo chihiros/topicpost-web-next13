@@ -5,7 +5,7 @@ import { SocialLoginButton, SocialLoginProps } from "./Parts/SocialButton";
 import { BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { RxCross2 } from "react-icons/rx";
-// import { EmailPassword } from "./EmailPassword";
+import { EmailPassword } from "./Parts/EmailPassword";
 import { SupabaseSignInWithProvider } from "@/utils/supabase"
 
 
@@ -68,7 +68,7 @@ const LoginModal: React.FC = () => {
                     {/* 右側にはEmail/Passwordのログインを設定する */}
                     <hr className="h-px my-4 bg-gray-200 border-0 sm:hidden" />
                     <div className="h-auto max-w-full sm:border-l-2 sm:pl-6">
-                      {/* <EmailPassword toggle={toggle} /> */}
+                      <EmailPassword toggle={toggle} />
                     </div>
                   </div>
                 </div>
