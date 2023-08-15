@@ -8,5 +8,8 @@
         "tailwindcss",
         "toastify",
         "topicpost"
-    ]
+    ],
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
 }
