@@ -3,8 +3,11 @@ import { Button, SubmitButton } from '@/components/atoms/Button';
 // import ArrowRight from '@/components/atoms/Icon/Arrow';
 import { Text, Textarea, Annotation } from '@/components/atoms/Input';
 import { Card } from '@/components/atoms/Card';
+import Breadcrumb, { BreadcrumbProps } from '@/components/molecules/Breadcrumb/Breadcrumb';
 
 export default function Home() {
+  const breadcrumb: BreadcrumbProps[] = [];
+
   return (
     <>
       {/* <Button>aaaaa</Button> */}
@@ -28,6 +31,9 @@ export default function Home() {
         recreationId='1'
         data='data'
       /> */}
+      <Breadcrumb
+        breadcrumb={breadcrumb}
+      />
     </>
   )
 }
