@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 /*
 Breakpoint prefix	Minimum width	CSS
@@ -11,16 +11,27 @@ xl	1280px	@media (min-width: 1280px) { ... }
 */
 
 export const WindowSize: React.FC = () => {
-  const [windowWidth, setWindowWidth] = React.useState<number>(window.innerWidth);
-  const [windowHeight, setWindowHeight] = React.useState<number>(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  const [windowHeight, setWindowHeight] = useState<number | null>(null);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
   };
 
+  useEffect(() => {
+    // コンポーネントがマウントされたときにwindowのサイズを取得
+    handleResize();
+
+    // リサイズイベントのリスナーを追加
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const GetResponsiveDesignSize = () => {
-    if (windowWidth <= 640) {
+    if (windowWidth === null) {
+      return 'null';
+    } else if (windowWidth <= 640) {
       return 'sm';
     } else if (windowWidth <= 768) {
       return 'md';
