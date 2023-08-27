@@ -1,3 +1,4 @@
+'use client';
 import React, { createContext, useState, useContext } from 'react';
 import ProfileAPI, { ProfileData, ProfileResponse } from '@/utils/api/api.topicpost.net/profile';
 
