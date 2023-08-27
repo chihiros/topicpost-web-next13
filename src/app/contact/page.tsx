@@ -19,12 +19,6 @@ export default function Page() {
   const [emailValue, setEmailValue] = useState('');
   const [messageValue, setMessageValue] = useState('');
 
-  const clearForm = () => {
-    setTextValue('');
-    setEmailValue('');
-    setMessageValue('');
-  }
-
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTextValue(e.target.value);
   };
@@ -52,9 +46,6 @@ export default function Page() {
       .then(response => {
         console.log(response.data);
         Toast.success('送信が完了しました');
-
-        // フォームの初期化
-        clearForm();
 
         setFormStatus('success');
       })
