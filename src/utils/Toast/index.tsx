@@ -8,16 +8,16 @@ interface IToast {
   error(message: string): void;
 }
 
-const Toast: IToast = {
-  success(message: string) {
+const toastImpl: IToast = {
+  success: (message: string) => {
     toast.success(message);
   }
-  , warn(message: string) {
+  , warn: (message: string) => {
     toast.warn(message);
   }
-  , error(message: string) {
+  , error: (message: string) => {
     toast.error(message);
   }
 }
 
-export default Toast;
+export default toastImpl;
