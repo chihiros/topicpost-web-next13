@@ -3,6 +3,7 @@ import Provider from '@/app/provider';
 import Sidebar from '@/components/organisms/Sidebar';
 import LoginModal from '@/components/organisms/Modal/Modal';
 import { WindowSize } from '@/components/debug/WindowSize';
+import { ToastContainer } from '@/utils/Toast';
 import './global.css';
 
 export const metadata: Metadata = {
