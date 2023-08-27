@@ -21,7 +21,7 @@ export class TopicPostAPI {
   private url: string;
 
   constructor(uri: string) {
-    this.baseUrl = process.env.REACT_APP_TOPICPOST_API_HOST + '/v1';
+    this.baseUrl = process.env.NEXT_PUBLIC_TOPICPOST_API_HOST + '/v1';
     this.url = `${this.baseUrl}${uri}`
   }
 
