@@ -25,7 +25,7 @@ const Sidebar = () => {
         {/* {isLoggedIn ? <SidebarLoggedIn /> : <SidebarLogin />} */}
         <LoginButton />
 
-        <Question />
+        {/* <Question /> */}
 
         {sidebar.map((label, index) => (
           <Label
