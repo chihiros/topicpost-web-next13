@@ -9,7 +9,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 import { useAuthContext } from "@/components/organisms/context/Auth.Provider"
-import Toast from "@/utils/Toast/";
+import toast from "@/utils/Toast/";
 import { v4 as uuidv4 } from "uuid";
 
 interface RecreationTableProps {
@@ -26,8 +26,6 @@ export const RecreationTable: React.FC<RecreationTableProps> = ({ data, records,
   // const history = useHistory();
   // const router = useRouter();
   const { isLoggedIn } = useAuthContext();
-
-  Toast.error('投稿するにはログインする必要があります');
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -182,7 +180,7 @@ export const RecreationTable: React.FC<RecreationTableProps> = ({ data, records,
             type="button"
             onClick={
               !isLoggedIn ?
-                () => Toast.error('投稿するにはログインする必要があります')
+                () => toast.error('投稿するにはログインする必要があります')
                 : () => {
                   // const uuid = uuidv4()
                   // // history.push(`/recreation/register/${uuid}`) // URLのパラメータにuuidを付与
