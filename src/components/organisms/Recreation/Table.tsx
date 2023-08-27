@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 import { BsFilter } from "react-icons/bs";
