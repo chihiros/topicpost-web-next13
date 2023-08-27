@@ -1,4 +1,5 @@
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+export { ToastContainer };
 import 'react-toastify/dist/ReactToastify.css';
 
 interface IToast {

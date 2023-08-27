@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={``}>
         <Provider>
+          <ToastContainer />
           {/* Sidebarを追加する */}
           <Sidebar />
           {/* メインコンテツ部分を追加する */}
