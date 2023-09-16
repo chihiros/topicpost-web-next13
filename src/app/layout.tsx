@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://nextjs.org/',
     images: [
       {
-        url: 'https://api-stg.topicpost.net/v1/og/recreation?id=21efc871-386a-45ea-9f18-c3fbe0775558',
+        url: 'https://api-stg.topicpost.net/v1/og/recreation?id=21efc871-386a-45ea-9f18-c3fbe0775558.png',
         width: 1200,
         height: 630,
         alt: 'Og Image Alt',
