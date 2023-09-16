@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     url: 'https://nextjs.org/',
     images: [
       {
-        url: 'https://api-stg.topicpost.net/v1/og/recreation?id=21efc871-386a-45ea-9f18-c3fbe0775558.png',
+        // url: 'https://api-stg.topicpost.net/v1/og/recreation?id=21efc871-386a-45ea-9f18-c3fbe0775558.png',
+        url: 'https://firebasestorage.googleapis.com/v0/b/peperomia-196da.appspot.com/o/web%2Fthumbnail.png?alt=media&token=c8a2cc87-3818-403d-a0d4-d9e7b777d414',
         width: 1200,
         height: 630,
         alt: 'Og Image Alt',
