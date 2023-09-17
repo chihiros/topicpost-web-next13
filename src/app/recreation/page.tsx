@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumb, { BreadcrumbProps } from '@/components/molecules/Breadcrumb/Breadcrumb';
 import RecreationAPI, { RecreationsResponse } from '@/utils/api/api.topicpost.net/recreation';
-import { RecreationTable } from '@/components/organisms/Recreation/Table';
+import RecreationTable from '@/components/organisms/Recreation/Table';
 
 export default function Page() {
   const breadcrumb: BreadcrumbProps[] = [{
