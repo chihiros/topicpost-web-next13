@@ -18,7 +18,7 @@ interface RecreationTableProps {
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const RecreationTable: React.FC<RecreationTableProps> = ({ data, records, currentPage, setCurrentPage }) => {
+const RecreationTable: React.FC<RecreationTableProps> = ({ data, records, currentPage, setCurrentPage }) => {
   const [isFilterDropdownOpen, setFilterDropdownOpen] = useState(false);
   const actionsDropdownRef = useRef<HTMLDivElement>(null);
   const filterDropdownRef = useRef<HTMLDivElement>(null);
@@ -275,3 +275,5 @@ export const RecreationTable: React.FC<RecreationTableProps> = ({ data, records,
     </div>
   );
 }
+
+export default RecreationTable;
