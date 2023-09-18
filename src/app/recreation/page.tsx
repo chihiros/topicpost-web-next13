@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Breadcrumb, { BreadcrumbProps } from '@/components/molecules/Breadcrumb/Breadcrumb';
 import RecreationAPI, { RecreationsResponse } from '@/utils/api/api.topicpost.net/recreation';
 import RecreationTable from '@/components/organisms/Recreation/Table';
+import Card from '@/components/atoms/Card';
 
 export default function Page() {
   const breadcrumb: BreadcrumbProps[] = [{
@@ -11,6 +12,7 @@ export default function Page() {
   }];
 
   const [recreations, setRecreations] = useState<RecreationsResponse>();
+  const [recreationsCard, setRecreationsCard] = useState<RecreationsResponse>();
   const [recreation_records, setRecreationRecords] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -27,6 +29,15 @@ export default function Page() {
     });
   }, [currentPage])
 
+  useEffect(() => {
+    const recreation = new RecreationAPI();
+    recreation.get(10, 0).then((response: RecreationsResponse) => {
+      console.log(response);
+      setRecreationsCard(response);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }, [])
 
   return (
     <>
